@@ -8,8 +8,8 @@ export class Accordion extends React.Component {
     }
 
     handleExpand() {
-        const newState = this.state.isOpen === true ? false : true;
-        this.setState({ isOpen: newState });
+        //const newState = this.state.isOpen === true ? false : true;
+        this.setState({ isOpen: !this.state.isOpen });
     }
 
     render() {
