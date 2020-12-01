@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import {Accordion} from './Accordion.js'
+import Accordion from './Accordion.js'
+//import {Accordion} from './Accordion_in_ts.js'
 
 import React, { useState } from "react"
 
