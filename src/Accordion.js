@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 
 const Accordion = ({title, children, isExpand = false}) => {
     
-    // I'm not entirely sure what the purpose of the below line is
     const [expand, setExpand] = useState(isExpand);
+
+    function toggleAccordion() {
+        setExpand(expand ? false : true);
+    }
     
     return (
         <div className="box">
-            <div className="title-box" onClick={() => setExpand(expand => !isExpand)}>
+            <div className="title-box" onClick={toggleAccordion}>
                 <span className="title">{title}</span>
                 <span className="icon"><i className={`fa fa-play-circle${!expand ? ' down' : ''}`}></i></span>
                 <div className="clearfix"></div>
@@ -44,4 +47,5 @@ export class Accordion extends React.Component {
         )
     }
 }
+export default Accordion;
 */
